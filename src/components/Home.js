@@ -128,7 +128,7 @@ function Home() {
                 </Section1>
                 <Line />
                 <Section2>
-                    <Title>여성 대표들의 이야기를 들어보고 싶다면</Title>
+                    <Title>여성 대표들의 이야기를 들어보고 싶다면!</Title>
                     <ContentWrap>
                         <Content2>
                             <ImgContent2></ImgContent2>
