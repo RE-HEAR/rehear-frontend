@@ -12,14 +12,12 @@ const StyledNavBar = styled.div`
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   height: 120px;
 `;
 const Logo = styled.img`
   width: 120px;
   height: 40px;
   margin-top: 20px;
-  // background: black;
   &:hover {
     cursor: pointer;
   }
@@ -50,7 +48,7 @@ const BtnEnter = styled.button`
   /* border: 1px #525252;
 border-style: solid solid solid none; */
   border-radius: 0 5px 5px 0;
-  background: #a2a9cd;
+  background: #075e53;
   color: #ffffff;
 `;
 const MenuWrap = styled.div`
@@ -63,9 +61,10 @@ const BtnMenu = styled.button`
   background: none;
   color: #222222;
   border: none;
+  font-size: 15px;
   &:hover {
     cursor: pointer;
-    color: #a2a9cd;
+    color: #075e53;
     font-weight: 700;
   }
 `;
@@ -75,12 +74,11 @@ const BtnWrap = styled.div`
   width: 150px;
   height: 20px;
   margin-top: 15px;
-  /* visibility: ; */
 `;
 const AccountBtn = styled.button`
   width: 70px;
   height: 20px;
-  background: #a2a9cd;
+  background: #075e53;
   border: none;
   border-radius: 10px;
   font-size: 10px;
@@ -102,8 +100,20 @@ const NameBox = styled.div`
   }
 `;
 const NavBar = (props) => {
-  const [id, setId] = React.useState(null);
+  if (!window.location.hash) {
+    window.location = window.location + "#loaded";
+    window.location.reload();
+  }
+  window.onload = function () {
+    if (`${props.num}` == 1) {
+      console.log("2");
+      document.getElementById("rehear").style.color = "#075E53";
+      document.getElementById("rehear").style.fontWeight = "700";
+    }
+  };
 
+  const [id, setId] = React.useState(null);
+  const [num, setNum] = React.useState(null);
   const comunities = ["질문 게시판", "홍보 게시판", "실시간 왁자지껄"];
   const infos = ["사업 공고", "창업 소식"];
   const users = ["마이페이지", "계정관리", "로그아웃"];
@@ -114,7 +124,7 @@ const NavBar = (props) => {
   const [user, setUser] = React.useState(0);
   const [userActive, setUserActive] = React.useState(false);
 
-  if (`${props.id}` === "") {
+  if (`${props.id}` == "") {
     return (
       <StyledNavBar>
         <Container>
