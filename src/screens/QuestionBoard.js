@@ -21,7 +21,7 @@ function QuestionBoard() {
               <strong>QnA -</strong> 이 질문 리:히어 해주세요!
             </div>
             <div id="sub_QnA">
-              여러분들의 고민과 답변 모두 소중하게 다시 들여다보는 ...
+              여러분들의 고민과 답변 모두 소중하게 다시 들여다보는 ~~
             </div>
           </div>
           <Link to="/RegisterQuestion">
