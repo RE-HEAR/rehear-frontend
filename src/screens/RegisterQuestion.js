@@ -78,7 +78,7 @@ function RegisterQuestion() {
       <Container>
         <Banner>
           <Banner_Content>
-            <Link to="/QBoard">
+            <Link to="/QuestionBoard">
               <KeyboardBackspaceIcon style={icon} />
             </Link>
             <TheList>
@@ -112,7 +112,7 @@ function RegisterQuestion() {
           주의: 질문을 올리신 후 답변이 달리면 다시 질문 글을 지울 수 없습니다. 유의해주세요!"
           onChange={(e) => this.contentSpace(e)}
         />
-        <Link to="/QBoard">
+        <Link to="/QuestionBoard">
           <input type="button" style={question} value="질문하기" />
         </Link>
       </Container>
