@@ -24,7 +24,7 @@ function Login() {
                             <div className="log-img">
                                 <LockIcon/>
                             </div>
-                            <input type='text' className="text" placeholder="password"/>
+                            <input type='password' className="text" placeholder="password"/>
                         </div>
                     </div>
                     <div id="check">비밀번호가 올바르지 않습니다.</div>
@@ -32,12 +32,15 @@ function Login() {
                         <input type="button"  id="log-btn" value="로그인" />
                     </Link>
                     <Link to="/join" className="center link">
-                        <input type="button"  id="join-btn" value="회원가입" />
+                        <input type="button"  class="btns" value="회원가입" />
+                    </Link>
+                    <Link to="" className="center link">
+                        <input type="button"  class="btns" value="카카오톡으로 로그인하기" />
+                    </Link>
+                    <Link to="" className="center link">
+                        <input type="button"  class="btns" value="Google로 로그인하기" />
                     </Link>
                 </div>
-            </div>
-            <div>
-                <Footer/>
             </div>
         </div>
     )
