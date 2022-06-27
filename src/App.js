@@ -5,6 +5,7 @@ import './App.css';
 import Home from './screens/home'
 import Login from './components/login';
 import Join from './components/join';
+import Category from './screens/category';
 
 function App() {
   return (
@@ -27,9 +28,8 @@ function App() {
     //   </header>
     // </div>
     <Routes>
-      <Home />
-      <Route path="./components/login" element={<Login/>} />
-      <Route path="./components/join" element={<Join/>} />
+      <Route exact path="/" component={Home}/>
+      
     </Routes>
   );
 }
