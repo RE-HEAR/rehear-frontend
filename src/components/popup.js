@@ -41,7 +41,7 @@ const Container = styled.div`
 `
 
 const Button = styled.button`
-    background-color:#A2A9CD;
+    background-color:#075E53;
     width:200px;
     height:25px;
     text-align:center;
