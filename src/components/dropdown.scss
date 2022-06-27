@@ -1,0 +1,23 @@
+.drop-box {
+  /* border:1px solid #FAF7F7; */
+  width: 100%;
+  padding-left: 100px;
+}
+.drop-box select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 12px;
+}
+.drop-box select:focus {
+  outline: none;
+}
+.drop-box select .menu {
+  min-height: 40px;
+  font-size: 12px;
+  padding: 0.5em;
+  border: none;
+}
+.drop-box select option[value=""] {
+  display: none;
+}

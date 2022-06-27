@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import NavBar from "../share/NavBar";
-import Footer from "../share/footer";
+import NavBar from "../share/NavBar.js";
+import Footer from "../share/footer.js";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 
@@ -11,18 +11,17 @@ const Container = styled.div`
   margin: auto;
 `;
 const Banner = styled.div`
-  height: 250px;
+  height: 200px;
   width: 1000px;
   margin: auto;
   margin-top: 20px;
   background: #c4c4c4;
 `;
 const Title = styled.div`
-  height: 20px;
   margin-bottom: 25px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
-  color: #222222;
+  color: #075e53;
 `;
 const ContentWrap = styled.div`
   display: flex;
@@ -50,12 +49,10 @@ const SubContent1 = styled.div`
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  // border: 1px solid #6937a1; //////////////////////////
 `;
 const SubContent2 = styled.div`
   height: 150px;
   margin-top: 10px;
-  // border: 1px solid #6937a1; //////////////////////////
 `;
 const SubText2 = styled.div`
   font-size: 16px;
@@ -68,9 +65,9 @@ const SubText2 = styled.div`
   -webkit-box-orient: vertical;
 `;
 const Hashtag = styled.div`
-  color: red;
+  color: #73c8a3;
   font-size: 14px;
-  margin-top: 3px;
+  margin-top: 5px;
   margin-right: 5px;
 `;
 const SubContent3 = styled.div`
@@ -102,7 +99,10 @@ const Content1 = styled.div`
 `;
 const TextBox = styled.div`
   padding: 5px;
-  border: 1px solid #6937a1; //////////////////////////
+  border: 2px solid #73c8a3;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 const ImgContent1 = styled.div`
   height: 30px;
@@ -116,11 +116,6 @@ const Section2 = styled.div`
 const Content2 = styled.div`
   width: 32%;
   height: max-content;
-`;
-const ImgContent2 = styled.div`
-  width: 300px;
-  height: 150px;
-  background: #c4c4c4;
 `;
 const Section4 = styled.div`
   height: max-content;
@@ -142,6 +137,7 @@ const BookContent = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
+
 const id = "kim"; //로그인 버튼 / 사용자 정보 중 보이게 될 정보 선택(id가 없을 때 로그인 버튼)
 function Home() {
   return (
@@ -263,7 +259,7 @@ function Home() {
             </Content1>
           </ContentWrap>
         </Section1>
-
+        <Line />
         <Section2>
           <Title>여러분! 이 지원사업 확인하셨나요?</Title>
           <ContentWrap>
@@ -362,7 +358,7 @@ function Home() {
             </Content2>
           </ContentWrap>
         </Section2>
-
+        <Line />
         <Section2>
           <Title>최근에 올라온 질문</Title>
           <ContentWrap>

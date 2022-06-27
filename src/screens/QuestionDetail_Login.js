@@ -78,7 +78,7 @@ function QuestionDetail() {
       <Container>
         <Banner>
           <Banner_Content>
-            <Link to="/QBoard">
+            <Link to="/QuestionBoard">
               <KeyboardBackspaceIcon style={icon} />
             </Link>
             <TheList>

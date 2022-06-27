@@ -125,6 +125,9 @@ const NavBar = (props) => {
             <Input></Input>
             <BtnEnter>검색</BtnEnter>
             <MenuWrap>
+              <Link to="../Intro">
+                <BtnMenu id="rehear">리:히어 이야기</BtnMenu>
+              </Link>
               <BtnMenu>
                 <NavDropdown
                   communityActive={communityActive}
@@ -151,11 +154,6 @@ const NavBar = (props) => {
                   infoItems={infos}
                   state={setCommunity}
                 />
-              </BtnMenu>
-              <BtnMenu>
-                <a target="_blank" href="http://www.naver.com">
-                  유튜브 채널 바로가기
-                </a>
               </BtnMenu>
             </MenuWrap>
           </FormContainer>
@@ -181,6 +179,9 @@ const NavBar = (props) => {
             <Input></Input>
             <BtnEnter>검색</BtnEnter>
             <MenuWrap>
+              <Link to="../Intro">
+                <BtnMenu id="rehear">리:히어 이야기</BtnMenu>
+              </Link>
               <BtnMenu>
                 <NavDropdown
                   communityActive={communityActive}
@@ -208,9 +209,6 @@ const NavBar = (props) => {
                   state={setCommunity}
                 />
               </BtnMenu>
-              <a target="_blank" href="http://www.youtube.com">
-                <BtnMenu>유튜브 채널 바로가기</BtnMenu>
-              </a>
             </MenuWrap>
           </FormContainer>
           <ProfileWrap>
@@ -222,7 +220,7 @@ const NavBar = (props) => {
                 setCommunityActive={setCommunityActive}
                 setUserActive={setUserActive}
                 condition={"사용자"}
-                title={"서리담" + "님"}
+                title={props.id + "님"}
                 userItems={users}
                 state={setCommunity}
               />
