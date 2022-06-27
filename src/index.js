@@ -6,7 +6,8 @@ import Home from './screens/Home';
 import Login from './screens/login';
 import Join from './screens/join';
 import Category from './screens/category';
-import QnA from './screens/qna_page';
+import QnA_page1 from './screens/QuestionBoard';
+import QnA_page2 from './screens/RegisterQuestion';
 import Intro from './screens/intro';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -20,7 +21,8 @@ ReactDOM.render(
         <Route path="/login" element={<Login />}/>
         <Route path="/join" element={<Join />}/>
         <Route path="/category" element={<Category />}/>
-        <Route path="/qna_page" element={<QnA/>}/>
+        <Route path="/qna_page1" element={<QnA_page1/>}/>
+        <Route path="/qna_page2" element={<QnA_page2/>}/>
         <Route path="/intro" element={<Intro/>}/>
       </Routes>
     </Router>
