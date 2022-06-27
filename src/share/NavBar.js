@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import NavDropdown from '../components/navDropdown';
 
 const StyledNavBar = styled.div`
 width: 1000px;
@@ -9,14 +12,15 @@ margin: 20px auto 0 auto;
 const Container = styled.div`
 display: flex;
 justify-content: space-between;
-/* align-items: center; */
 height: 120px;
 `
 const Logo = styled.img`
 width: 120px;
-height: 50px;
-margin-top: 15px;
-// background: black;
+height: 40px;
+margin-top: 20px;
+&:hover{
+    cursor:pointer;
+}
 `
 const FormContainer = styled.div`
 display: flex;
@@ -44,7 +48,7 @@ border: none;
 /* border: 1px #525252;
 border-style: solid solid solid none; */
 border-radius: 0 5px 5px 0;
-background: #A2A9CD;
+background: #075E53;
 color: #ffffff;
 `
 const MenuWrap = styled.div`
@@ -57,6 +61,12 @@ const BtnMenu = styled.button`
 background: none;
 color: #222222;
 border: none;
+font-size:15px;
+&:hover{
+    cursor:pointer;
+    color:#075E53;
+    font-weight: 700;
+}
 `
 const BtnWrap = styled.div`
 display: flex;
@@ -64,41 +74,175 @@ justify-content: space-between;
 width: 150px;
 height: 20px;
 margin-top: 15px;
+visibility: 
 `
 const AccountBtn = styled.button`
 width: 70px;
-background: #A2A9CD;
+height: 20px;
+background: #075E53;
 border: none;
 border-radius: 10px;
 font-size: 10px;
 color: #ffffff;
 `
+const ProfileWrap = styled.div`
+display: flex;
+justify-content: space-between;
+align-items:center;
+width: 150px;
+height: 35px;
+margin-top: 15px;
+`
+const NameBox = styled.div`
+font-size:15px;
+margin-right:10px;
+&:hover{
+    cursor:pointer;
+}
+`
+const NavBar = (props) => {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+    window.onload = function (){
+        if(`${props.num}`== 1){
+            console.log('2');
+            document.getElementById("rehear").style.color="#075E53";
+            document.getElementById("rehear").style.fontWeight="700";
+        }
+    }
 
-function NavBar() {
-    return(
-        <StyledNavBar>
-            <Container>
-                <Logo src='img/logo_rehear.png'></Logo>
-                <FormContainer>
-                    <Input></Input>
-                    <BtnEnter>검색</BtnEnter>
-                    <MenuWrap>
-                        <BtnMenu>실패 경험담</BtnMenu>
-                        <BtnMenu>실패담 공유하기</BtnMenu>
-                        <BtnMenu>유튜브 채널 바로가기</BtnMenu>
-                    </MenuWrap>
-                </FormContainer>
-                <BtnWrap>
-                    <Link to="Login">
-                        <AccountBtn>로그인</AccountBtn>
+    const [id, setId] = React.useState(null);
+    const [num, setNum] = React.useState(null);
+    const comunities=["질문 게시판", "홍보 게시판", "실시간 왁자지껄"];
+    const infos=["사업 공고", "창업 소식"];
+    const users=["마이페이지", "계정관리", "로그아웃"];
+    const [info, setInfo] = React.useState("예"); 
+    const [infoActive, setInfoActive] = React.useState(false);
+    const [community, setCommunity] = React.useState(0); 
+    const [communityActive, setCommunityActive] = React.useState(false);
+    const [user, setUser] = React.useState(0); 
+    const [userActive, setUserActive] = React.useState(false);
+
+    if(`${props.id}`==""){
+        return(
+            <StyledNavBar>
+                <Container>
+                    <Link to="../">
+                        <Logo src='img/logo_rehear.png'></Logo>
                     </Link>
-                    <Link to="Join">
-                        <AccountBtn>회원가입</AccountBtn>
+                    <FormContainer>
+                        <Input></Input>
+                        <BtnEnter>검색</BtnEnter>
+                        <MenuWrap>
+                            <Link to="../Intro">
+                                <BtnMenu id="rehear" >리:히어 이야기</BtnMenu>
+                            </Link>
+                            <BtnMenu>
+                                <NavDropdown 
+                                    communityActive={communityActive}
+                                    setInfoActive={setInfoActive}
+                                    setCommunityActive={setCommunityActive}
+                                    setUserActive={setUserActive}
+                                    condition={"커뮤니티"}
+                                    title={"커뮤니티"}
+                                    communityItems={comunities}
+                                    state={setInfo}
+                                />
+                            </BtnMenu>
+                            <Link to="../Category">
+                                <BtnMenu>창업 경험담</BtnMenu>
+                            </Link>
+                            <BtnMenu>
+                                <NavDropdown 
+                                    infoActive={infoActive}
+                                    setInfoActive={setInfoActive}
+                                    setCommunityActive={setCommunityActive}
+                                    setUserActive={setUserActive}
+                                    condition={"정보마당"}
+                                    title={"정보 마당"}
+                                    infoItems={infos}
+                                    state={setCommunity}
+                                />
+                            </BtnMenu>
+                        </MenuWrap>
+                    </FormContainer>
+                    <BtnWrap>
+                        <Link to="../Login">
+                            <AccountBtn>로그인</AccountBtn>
+                        </Link>
+                        <Link to="../Join">
+                            <AccountBtn>회원가입</AccountBtn>
+                        </Link>
+                    </BtnWrap>
+                </Container>
+            </StyledNavBar>
+        )
+    }else{
+        return(
+            <StyledNavBar>
+                <Container>
+                    <Link to="../">
+                        <Logo src='img/logo_rehear.png'></Logo>
                     </Link>
-                </BtnWrap>
-            </Container>
-        </StyledNavBar>
-    )
+                    <FormContainer>
+                        <Input></Input>
+                        <BtnEnter>검색</BtnEnter>
+                        <MenuWrap>
+                            <Link to="../Intro">
+                                <BtnMenu id="rehear">리:히어 이야기</BtnMenu>
+                            </Link>
+                            <BtnMenu>
+                                <NavDropdown 
+                                    communityActive={communityActive}
+                                    setInfoActive={setInfoActive}
+                                    setCommunityActive={setCommunityActive}
+                                    setUserActive={setUserActive}
+                                    condition={"커뮤니티"}
+                                    title={"커뮤니티"}
+                                    communityItems={comunities}
+                                    state={setInfo}
+                                />
+                            </BtnMenu>
+                            <Link to="../Category">
+                                <BtnMenu>창업 경험담</BtnMenu>
+                            </Link>
+                            <BtnMenu>
+                                <NavDropdown 
+                                    infoActive={infoActive}
+                                    setInfoActive={setInfoActive}
+                                    setCommunityActive={setCommunityActive}
+                                    setUserActive={setUserActive}
+                                    condition={"정보마당"}
+                                    title={"정보 마당"}
+                                    infoItems={infos}
+                                    state={setCommunity}
+                                />
+                            </BtnMenu>
+                        </MenuWrap>
+                    </FormContainer>
+                    <ProfileWrap>
+                        <AccountCircleIcon style={{fontSize:"35px"}}/>
+                        <NameBox>
+                            <NavDropdown 
+                                userActive={userActive}
+                                setInfoActive={setInfoActive}
+                                setCommunityActive={setCommunityActive}
+                                setUserActive={setUserActive}
+                                condition={"사용자"}
+                                title={props.id+"님"}
+                                userItems={users}
+                                state={setCommunity}
+                            />
+                        </NameBox>
+                        <ArrowDropDownIcon style={{fontSize:"35px"}}/>
+                    </ProfileWrap>
+                </Container>
+            </StyledNavBar>
+        )
+    }
 }
 
 export default NavBar;
+
