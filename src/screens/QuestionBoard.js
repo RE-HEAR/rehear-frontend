@@ -10,7 +10,7 @@ import "./QuestionBoard.scss";
 
 const StyledHome = styled.div``;
 
-function QnA_page1() {
+function QuestionBoard() {
   return (
     <StyledHome>
       <NavBar />
@@ -21,10 +21,10 @@ function QnA_page1() {
               <strong>QnA -</strong> 이 질문 리:히어 해주세요!
             </div>
             <div id="sub_QnA">
-              여러분들의 고민과 답변 모두 소중하게 다시 들여다보는 ...
+              여러분들의 고민과 답변 모두 소중하게 다시 들여다보는 ~~
             </div>
           </div>
-          <Link to="/QnA_page2">
+          <Link to="/RegisterQuestion">
             <input type="button" id="question" value="질문하기" />
           </Link>
         </div>
@@ -48,7 +48,7 @@ function QnA_page1() {
           <div id="contentWrap">
             {/*컨텐츠 1*/}
             <div id="cont_type1">
-              <Link to="/QDetail_Login" id="link">
+              <Link to="/QuestionDetail_Login" id="link">
                 <div id="textbox">
                   <div id="sub_cont_title">
                     엔젤투자자와 투자유치건에 대해서 이런 갈등 .......
@@ -81,7 +81,7 @@ function QnA_page1() {
             </div>
             {/*컨텐츠 2*/}
             <div id="cont_type1">
-              <Link to="/QDetail_Login" id="link">
+              <Link to="/QuestionDetail_Login" id="link">
                 <div id="textbox">
                   <div id="sub_cont_title">
                     스타트업 초기에는 원래 다 이렇게 어려운가요?
@@ -115,7 +115,7 @@ function QnA_page1() {
             </div>
             {/*컨텐츠 3*/}
             <div id="cont_type1">
-              <Link to="/QDetail_Login" id="link">
+              <Link to="/QuestionDetail_Login" id="link">
                 <div id="textbox">
                   <div id="sub_cont_title">
                     이번에 진행되는 정부지원사업 관련해 IR 컨설팅...
@@ -148,8 +148,8 @@ function QnA_page1() {
             </div>
             {/*컨텐츠 4*/}
             <div id="cont_type1">
-              <Link to="/QDetail_Login" id="link">
-                {/* <Link to="/QDetail_NonLogin" id="link">  -> 로그인 비로그인 페이지 다르게 해야함*/}
+              <Link to="/QuestionDetail_Login" id="link">
+                {/* <Link to="/QuestionDetail_NonLogin" id="link">  -> 로그인 비로그인 페이지 다르게 해야함*/}
                 <div id="textbox">
                   <div id="sub_cont_title">
                     이번에 진행되는 정부지원사업 관련해 IR 컨설팅...
@@ -190,7 +190,7 @@ function QnA_page1() {
             {/*컨텐츠 1*/}
             {/*Content2 -> Content1과 크기가 다르기 때문에 이름 다름*/}
             <div id="cont_type2">
-              <Link to="/QDetail_Login" id="link">
+              <Link to="/QuestionDetail_Login" id="link">
                 <div id="textbox">
                   <div id="sub_cont_title">
                     IR 피칭 시 복장이 많이 중요한가요?
@@ -224,7 +224,7 @@ function QnA_page1() {
             </div>
             {/*컨텐츠 2*/}
             <div id="cont_type2">
-              <Link to="/QDetail_Login" id="link">
+              <Link to="/QuestionDetail_Login" id="link">
                 <div id="textbox">
                   <div id="sub_cont_title">
                     저희 회사가 이번에 데스밸리에 진입한 듯 합니다...
@@ -257,7 +257,7 @@ function QnA_page1() {
             </div>
             {/*컨텐츠 3*/}
             <div id="cont_type2">
-              <Link to="/QDetail_Login" id="link">
+              <Link to="/QuestionDetail_Login" id="link">
                 <div id="textbox">
                   <div id="sub_cont_title">
                     지역 지원 사업을 지원하게 되었는데 이 경우에 ...
@@ -297,7 +297,7 @@ function QnA_page1() {
           <div id="contentWrap">
             {/*컨텐츠 1*/}
             <div id="cont_type2">
-              <Link to="/QDetail_Login" id="link">
+              <Link to="/QuestionDetail_Login" id="link">
                 <div id="textbox">
                   <div id="sub_cont_title">
                     리:히어에서 진행하는 무료아이템 컨설팅 신청 ......
@@ -331,7 +331,7 @@ function QnA_page1() {
             </div>
             {/*컨텐츠 2*/}
             <div id="cont_type2">
-              <Link to="/QDetail_Login" id="link">
+              <Link to="/QuestionDetail_Login" id="link">
                 <div id="textbox">
                   <div id="sub_cont_title">
                     사업계획서 작성 시 아직까지 눈에 띄는 매출이 ...
@@ -365,7 +365,7 @@ function QnA_page1() {
             </div>
             {/*컨텐츠 3*/}
             <div id="cont_type2">
-              <Link to="/QDetail_Login" id="link">
+              <Link to="/QuestionDetail_Login" id="link">
                 <div id="textbox">
                   <div id="sub_cont_title">
                     수요조사와 실제 수요가 다른 경우 어떻게 하면 ...
@@ -398,7 +398,7 @@ function QnA_page1() {
             </div>
             {/*컨텐츠 4*/}
             <div id="cont_type2">
-              <Link to="/QDetail_Login" id="link">
+              <Link to="/QuestionDetail_Login" id="link">
                 <div id="textbox">
                   <div id="sub_cont_title">
                     리:히어에서 진행하는 무료아이템 컨설팅 신청 어쩌구 저쩌구
@@ -432,7 +432,7 @@ function QnA_page1() {
             </div>
             {/*컨텐츠 5*/}
             <div id="cont_type2">
-              <Link to="/QDetail_Login" id="link">
+              <Link to="/QuestionDetail_Login" id="link">
                 <div id="textbox">
                   <div id="sub_cont_title">
                     리:히어에서 진행하는 무료아이템 컨설팅 신청 어쩌구 저쩌구
@@ -466,7 +466,7 @@ function QnA_page1() {
             </div>
             {/*컨텐츠 6*/}
             <div id="cont_type2">
-              <Link to="/QDetail_Login" id="link">
+              <Link to="/QuestionDetail_Login" id="link">
                 <div id="textbox">
                   <div id="sub_cont_title">
                     리:히어에서 진행하는 무료아이템 컨설팅 신청 어쩌구 저쩌구
@@ -506,4 +506,4 @@ function QnA_page1() {
   );
 }
 
-export default QnA_page1;
+export default QuestionBoard;
