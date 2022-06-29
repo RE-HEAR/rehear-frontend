@@ -21,8 +21,10 @@ ReactDOM.render(
         <Route path="/login" element={<Login />}/>
         <Route path="/join" element={<Join />}/>
         <Route path="/category" element={<Category />}/>
-        <Route path="/qna_page1" element={<QnA_page1/>}/>
-        <Route path="/qna_page2" element={<QnA_page2/>}/>
+        <Route path="/QuestionBoard" element={<QBoard />} />
+        <Route path="/RegisterQuestion" element={<RegisterQ />} />
+        <Route path="/QuestionDetail_Login" element={<QDetail_Login />} />
+        <Route path="/QuestionDetail_NonLogin" element={<QDetail_NonLogin />} />
         <Route path="/intro" element={<Intro/>}/>
       </Routes>
     </Router>
