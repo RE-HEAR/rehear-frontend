@@ -329,7 +329,7 @@ class QDetail_Login extends Component {
                     <ChatBubbleOutlineIcon style={recomment} onClick={0} />
                     {/* 클릭 시 대댓글 기능 구현 */}
                     <ThumbUpOffAltIcon style={good} onClick={0} />
-                    <ThumbUpAltIcon style={good} onClick={0} />
+                    {/* <ThumbUpAltIcon style={good} onClick={0} /> */}
                     {/* 클릭 시 좋아요 기능 구현 */}
                     <br />
                     <br />
