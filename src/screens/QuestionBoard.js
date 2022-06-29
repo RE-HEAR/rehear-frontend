@@ -49,6 +49,7 @@ function QuestionBoard() {
             {/*컨텐츠 1*/}
             <div id="cont_type1">
               <Link to="/QuestionDetail_Login" id="link">
+                {/* <Link to="/QuestionDetail_NonLogin" id="link"> */}
                 <div id="textbox">
                   <div id="sub_cont_title">
                     엔젤투자자와 투자유치건에 대해서 이런 갈등 .......
