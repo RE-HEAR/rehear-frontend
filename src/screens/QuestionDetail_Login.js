@@ -209,8 +209,8 @@ class QDetail_Login extends Component {
     comments: [],
     // recomment: "",
     // recomments: [],
-    isLike1Checked: false,
-    isLike2Checked: false,
+    isLikeChecked: false,
+    isCommentChecked: false,
   };
   num = 0;
 
@@ -230,23 +230,25 @@ class QDetail_Login extends Component {
     });
     this.num += 1;
   };
-  like1 = () => {
-    this.state.isLike1Checked
+  like = () => {
+    {
+      /* 좋아요 기능 - 글, 각 댓글 다 다르게 적용되어야 함 / 메인 글의 경우 숫자도 연동되어야 함*/
+    }
+    this.state.isLikeChecked
       ? this.setState({
-          isLike1Checked: false,
+          isLikeChecked: false,
         })
       : this.setState({
-          isLike1Checked: true,
+          isLikeChecked: true,
         });
   };
-  like2 = () => {
-    //댓글들마다 다르게 적용되어야 함 *보완필요*
-    this.state.isLike2Checked
+  comment = () => {
+    this.state.isCommentChecked
       ? this.setState({
-          isLike2Checked: false,
+          isCommentChecked: false,
         })
       : this.setState({
-          isLike2Checked: true,
+          isCommentChecked: true,
         });
   };
 
@@ -294,10 +296,10 @@ class QDetail_Login extends Component {
           </ContentWrap>
           <AllIconWrap>
             <IconWrap>
-              {this.state.isLike1Checked ? (
-                <ThumbUpAltIcon style={iconstyle1} onClick={this.like1} />
+              {this.state.isLikeChecked ? (
+                <ThumbUpAltIcon style={iconstyle1} onClick={this.like} />
               ) : (
-                <ThumbUpOffAltIcon style={iconstyle1} onClick={this.like1} />
+                <ThumbUpOffAltIcon style={iconstyle1} onClick={this.like} />
               )}
               <p style={p}>3</p> {/* 좋아요 눌리면 숫자 증가 */}
             </IconWrap>
@@ -355,10 +357,10 @@ class QDetail_Login extends Component {
                     <HashTag>IT</HashTag>
                     <ChatBubbleOutlineIcon style={recomment} onClick={0} />
                     {/* 클릭 시 대댓글 기능 구현 */}
-                    {this.state.isLike2Checked ? (
-                      <ThumbUpAltIcon style={good} onClick={this.like2} />
+                    {this.state.isLikeChecked ? (
+                      <ThumbUpAltIcon style={good} onClick={this.like} />
                     ) : (
-                      <ThumbUpOffAltIcon style={good} onClick={this.like2} />
+                      <ThumbUpOffAltIcon style={good} onClick={this.like} />
                     )}
                     <br />
                     <br />
