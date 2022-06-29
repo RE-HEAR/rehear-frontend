@@ -124,7 +124,7 @@ const NavBar = (props) => {
   const [user, setUser] = React.useState(0);
   const [userActive, setUserActive] = React.useState(false);
 
-  if (`${props.id}` == "") {
+  if (`${props.id}` === "") {
     return (
       <StyledNavBar>
         <Container>

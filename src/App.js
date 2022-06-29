@@ -8,19 +8,14 @@ import Join from "./screens/join";
 // import Category from "./screens/category";
 import QBoard from "./screens/QuestionBoard";
 import RegisterQ from "./screens/RegisterQuestion";
+import QDetail_Login from "./screens/QuestionDetail_Login";
+import QDetail_NonLogin from "./screens/QuestionDetail_NonLogin";
 // import Intro from "./screens/intro";
 
 function App() {
   return (
     <Routes>
       <Route exact path="/" component={Home} />
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/join" element={<Join />} />
-      {/* <Route path="/category" element={<Category />} /> */}
-      <Route path="/QuestionBoard" element={<QBoard />} />
-      <Route path="/RegisterQuestion" element={<RegisterQ />} />
-      {/* <Route path="/intro" element={<Intro />} /> */}
     </Routes>
   );
 }

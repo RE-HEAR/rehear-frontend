@@ -40,7 +40,7 @@ const NavDropdown = (props) => {
       props.setInfoActive(!props.infoActive);
     } else if (props.communityActive) {
       props.setCommunityActive(!props.communityActive);
-      if (name == "질문 게시판") {
+      if (name === "질문 게시판") {
         window.location.href = "/QuestionBoard";
       }
     } else if (props.userActive) {

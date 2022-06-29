@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&family=Roboto:wght@100;300;400;700;900&display=swap");
 @import "../share/color.scss";
 
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 #container {
   width: 1000px;
   margin: auto;
@@ -21,12 +25,14 @@
   margin-right: 20px;
   margin-top: 15px;
   color: #075e53;
+  font-family: "Noto Sans KR", sans-serif;
 }
 #sub_QnA {
   font-size: 15px;
   margin-right: 20px;
   float: left;
-  color: #848484;
+  color: #585858;
+  font-family: "Noto Sans KR", sans-serif;
 }
 #question {
   width: 90px;
@@ -40,6 +46,8 @@
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+  font-size: 15px;
+  padding-bottom: 2px;
 }
 
 #search {
@@ -79,6 +87,8 @@
   background: #075e53;
   color: #ffffff;
   cursor: pointer;
+  font-size: 15px;
+  padding-bottom: 2px;
 }
 
 #section1 {
@@ -92,6 +102,7 @@
   font-size: 25px;
   font-weight: bold;
   color: #075e53;
+  font-family: "Noto Sans KR", sans-serif;
 }
 #contentWrap {
   display: flex;
@@ -115,6 +126,7 @@
   margin-top: 5px;
   font-size: 18px;
   font-weight: 700;
+  font-family: "Noto Sans KR", sans-serif;
   overflow: hidden; // 너비를 벗어난 글자들 숨김
   white-space: no-wrap; //줄바꿈 방지
   word-wrap: break-word;
@@ -131,6 +143,7 @@
 }
 #sub-text {
   font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
   overflow: hidden;
   white-space: no-wrap;
   word-wrap: break-word;
@@ -149,6 +162,7 @@
   margin-top: 3px;
   margin-right: 5px;
   color: #73c8a3;
+  font-family: "Noto Sans KR", sans-serif;
 }
 #section2 {
   height: max-content;
