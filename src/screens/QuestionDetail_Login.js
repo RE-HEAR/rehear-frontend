@@ -207,6 +207,7 @@ class QDetail_Login extends Component {
     comments: [],
     // recomment: "",
     // recomments: [],
+    isChecked: false,
   };
   num = 0;
 
@@ -225,6 +226,17 @@ class QDetail_Login extends Component {
       comment: "",
     });
     this.num += 1;
+  };
+  like = () => {
+    //버튼을 누를때마다
+    this.state.isChecked //isChecked가 True면(하트를 빨간색에서 검은색으로)
+      ? this.setState({
+          isChecked: false, //isChecked를 false로 초기화
+        })
+      : this.setState({
+          //isChecked가 false면(하트를 검은색에서 빨간색으로
+          isChecked: true, //isChecked를 true로 초기화
+        });
   };
 
   render() {
@@ -328,9 +340,11 @@ class QDetail_Login extends Component {
                     <HashTag>IT</HashTag>
                     <ChatBubbleOutlineIcon style={recomment} onClick={0} />
                     {/* 클릭 시 대댓글 기능 구현 */}
-                    <ThumbUpOffAltIcon style={good} onClick={0} />
-                    {/* <ThumbUpAltIcon style={good} onClick={0} /> */}
-                    {/* 클릭 시 좋아요 기능 구현 */}
+                    {this.state.isChecked ? (
+                      <ThumbUpAltIcon style={good} onClick={this.like} />
+                    ) : (
+                      <ThumbUpOffAltIcon style={good} onClick={this.like} />
+                    )}
                     <br />
                     <br />
                     <pre style={{ clear: "left" }}>{commentText.comment}</pre>
