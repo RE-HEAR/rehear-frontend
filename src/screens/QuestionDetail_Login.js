@@ -211,6 +211,7 @@ class QDetail_Login extends Component {
     // recomments: [],
     isLikeChecked: false,
     isCommentChecked: false,
+    isBookmarkChecked: false,
   };
   num = 0;
 
@@ -231,9 +232,6 @@ class QDetail_Login extends Component {
     this.num += 1;
   };
   like = () => {
-    {
-      /* 좋아요 기능 - 글, 각 댓글 다 다르게 적용되어야 함 / 메인 글의 경우 숫자도 연동되어야 함*/
-    }
     this.state.isLikeChecked
       ? this.setState({
           isLikeChecked: false,
@@ -242,6 +240,7 @@ class QDetail_Login extends Component {
           isLikeChecked: true,
         });
   };
+
   comment = () => {
     this.state.isCommentChecked
       ? this.setState({
@@ -249,6 +248,16 @@ class QDetail_Login extends Component {
         })
       : this.setState({
           isCommentChecked: true,
+        });
+  };
+
+  bookmark = () => {
+    this.state.isBookmarkChecked
+      ? this.setState({
+          isBookmarkChecked: false,
+        })
+      : this.setState({
+          isBookmarkChecked: true,
         });
   };
 
@@ -301,14 +310,22 @@ class QDetail_Login extends Component {
               ) : (
                 <ThumbUpOffAltIcon style={iconstyle1} onClick={this.like} />
               )}
-              <p style={p}>3</p> {/* 좋아요 눌리면 숫자 증가 */}
+              <p style={p}>3</p> {/* 좋아요 눌리면 숫자 증가시켜야함 */}
             </IconWrap>
             <IconWrap>
               <ChatBubbleOutlineIcon style={iconstyle1} />
               <p style={p}>2</p>
             </IconWrap>
             <IconWrap>
-              <BookmarkBorderIcon style={iconstyle2} onclick={0} />
+              {/* 북마크 표시 */}
+              {this.state.isBookmarkChecked ? (
+                <BookmarkIcon style={iconstyle2} onClick={this.bookmark} />
+              ) : (
+                <BookmarkBorderIcon
+                  style={iconstyle2}
+                  onClick={this.bookmark}
+                />
+              )}
             </IconWrap>
           </AllIconWrap>
         </Container>
@@ -355,8 +372,8 @@ class QDetail_Login extends Component {
                     <HashTag>예비창업자</HashTag>
                     {/*유저 해시태그 들어가게 해야함*/}
                     <HashTag>IT</HashTag>
+                    {/* 클릭 시 대댓글 기능 구현 필요*/}
                     <ChatBubbleOutlineIcon style={recomment} onClick={0} />
-                    {/* 클릭 시 대댓글 기능 구현 */}
                     {this.state.isLikeChecked ? (
                       <ThumbUpAltIcon style={good} onClick={this.like} />
                     ) : (

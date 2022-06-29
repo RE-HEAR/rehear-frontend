@@ -80,42 +80,37 @@ const question = {
   fontFamily: "'Noto Sans KR', sans-serif",
 };
 
-// const BtnQ = styled.button`
-//   width: 90px;
-//   height: 40px;
-//   margin-top: 30px;
-//   margin-right: 70px;
-//   margin-bottom: 25px;
-//   border: none;
-//   border-radius: 5px;
-//   background-color: #075e53;
-//   color: #ffffff;
-//   float: right;
-//   text-align: center;
-//   vertical-align: middle;
-//   cursor: pointer;
-// `;
-
 class RegisterQ extends Component {
-  state = { title: "", content: "" };
-  postBoard = async () => {
-    const { title, content } = this.state;
-    const post = await axios.post("http://localhost:3000/QuestionBoard", {
-      title,
-      content,
-    });
+  state = { title: "", content: "", isLogin: false };
+  // postBoard = async () => {
+  //   const { title, content } = this.state;
+  //   const post = await axios.post("http://localhost:3000/QuestionBoard", {
+  //     title,
+  //     content,
+  //   });
 
-    this.setState({
-      title: "",
-      content: "",
-    });
-    console.log(post);
-  };
+  //   this.setState({
+  //     title: "",
+  //     content: "",
+  //   });
+  //   console.log(post);
+  // };
+
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
       [name]: value,
     });
+  };
+
+  btnQ = () => {
+    this.state.isLogin
+      ? this.setState({
+          isLogin: false,
+        })
+      : this.setState({
+          isLogin: true,
+        });
   };
 
   render() {
