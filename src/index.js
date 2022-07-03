@@ -10,7 +10,7 @@ import QBoard from "./screens/QuestionBoard";
 import RegisterQ from "./screens/RegisterQuestion";
 import QDetail_Login from "./screens/QuestionDetail_Login";
 import QDetail_NonLogin from "./screens/QuestionDetail_NonLogin";
-// import Intro from "./screens/intro";
+import Intro from "./screens/intro";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -27,7 +27,7 @@ ReactDOM.render(
         <Route path="/RegisterQuestion" element={<RegisterQ />} />
         <Route path="/QuestionDetail_Login" element={<QDetail_Login />} />
         <Route path="/QuestionDetail_NonLogin" element={<QDetail_NonLogin />} />
-        {/* <Route path="/intro" element={<Intro />} /> */}
+        <Route path="/intro" element={<Intro />} />
       </Routes>
     </Router>
   </React.StrictMode>,

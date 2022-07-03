@@ -360,13 +360,13 @@ const BtnMenu = styled.button`
     font-weight: 700;
   }
 `;
-const BtnWrap = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 150px;
-  height: 20px;
-  margin-top: 15px;
-  /* visibility: ; */
-`;
+// const BtnWrap = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   width: 150px;
+//   height: 20px;
+//   margin-top: 15px;
+//   visibility: ;
+// `;
 
 export default Join;

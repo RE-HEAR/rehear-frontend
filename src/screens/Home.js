@@ -117,6 +117,11 @@ const Content2 = styled.div`
   width: 32%;
   height: max-content;
 `;
+const ImgContent2 = styled.div`
+  width: 300px;
+  height: 150px;
+  background: #c4c4c4;
+`;
 const Section4 = styled.div`
   height: max-content;
   margin-top: 20px;
@@ -137,7 +142,6 @@ const BookContent = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
-
 const id = "kim"; //로그인 버튼 / 사용자 정보 중 보이게 될 정보 선택(id가 없을 때 로그인 버튼)
 function Home() {
   return (
