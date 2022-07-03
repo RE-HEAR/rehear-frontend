@@ -81,20 +81,7 @@ const question = {
 };
 
 class RegisterQ extends Component {
-  state = { title: "", content: "", isLogin: false };
-  // postBoard = async () => {
-  //   const { title, content } = this.state;
-  //   const post = await axios.post("http://localhost:3000/QuestionBoard", {
-  //     title,
-  //     content,
-  //   });
-
-  //   this.setState({
-  //     title: "",
-  //     content: "",
-  //   });
-  //   console.log(post);
-  // };
+  state = { title: "", content: "", isFill: false };
 
   handleChange = (e) => {
     const { name, value } = e.target;
